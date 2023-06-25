@@ -4,7 +4,7 @@ import privacyImg from "../assets/network.png";
 
 const Policy = () => {
     return (
-        <Layout>
+        <Layout title={"Privacy Policy"}>
             <div className="container">
                 <div className="row">
 

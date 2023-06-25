@@ -8,13 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/HomePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/PageNotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/PageNotFound.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +69,7 @@
       <workItem from="1687494913604" duration="524000" />
       <workItem from="1687495485040" duration="45000" />
       <workItem from="1687495562419" duration="2736000" />
-      <workItem from="1687498906115" duration="41345000" />
+      <workItem from="1687498906115" duration="42941000" />
     </task>
     <servers />
   </component>

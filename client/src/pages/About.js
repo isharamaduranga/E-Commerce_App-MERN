@@ -4,7 +4,7 @@ import aboutImg from '../assets/cus_a.png'
 
 const About = () => {
     return (
-        <Layout>
+        <Layout title={"About Us - E-Commerce App"}>
             <div className="container">
                 <div className="row">
 
@@ -35,5 +35,4 @@ const About = () => {
         </Layout>
     );
 };
-
 export default About;

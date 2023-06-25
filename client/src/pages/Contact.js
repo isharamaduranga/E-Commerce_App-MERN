@@ -3,7 +3,7 @@ import Layout from "../components/Layout/Layout";
 
 const Contact = () => {
     return (
-        <Layout>
+        <Layout title={"Contact Us "}>
             <section className="container ps-5 pe-5">
 
                 <h2 className="h1-responsive font-weight-bold text-center pt-3">Contact us</h2>
