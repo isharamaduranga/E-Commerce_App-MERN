@@ -15,7 +15,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <Link
                             to="/"
-                            className="navbar-brand text-info"
+                            className="navbar-brand text-warning"
                             >
                             <HiShoppingBag className="pb-1 text-warning" size="35px"/> E-COMMERCE
                         </Link>

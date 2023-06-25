@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Layout from "../../components/Layout/Layout";
 import {toast} from 'react-toastify';
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import axios from "axios";
-import SnackBar from "../../components/SnackBar/SnackBar";
+
 const Register = () => {
 
     const [name, setName] = useState("");
@@ -11,7 +11,8 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [phone, setPhone] = useState("");
     const [address, setAddress] = useState("");
-    const [showSnackBar, setShowSnackBar] = useState(false);
+
+    const navigate = useNavigate();
 
     //form handle submit
     const handleSubmit = async (e) => {
@@ -23,7 +24,8 @@ const Register = () => {
                 {name,email,password,phone,address}
                 );
             if (res && res.data.success) {
-                setShowSnackBar(true); // Show the SnackBar
+                toast.success(res.data.message)
+                navigate("/login");
 
             }else{
                 toast.error(res.data.message)
@@ -33,18 +35,13 @@ const Register = () => {
             toast.error('Something went wrong !!!');
         }
     }
-    const newMsg = <Link to="/login" className="link-warning">Go Login</Link>
-    return (<Layout title="Register - E-Commerce App">
+
+    return (
+        <Layout title="Register - E-Commerce App">
             <div className="register">
-                <h2 style={{letterSpacing: "5px"}}> REGISTER PAGE </h2>
+                <form className="form_area  rounded-5 pt-3 pb-4 ps-5 pe-5 bg-white" onSubmit={handleSubmit}>
 
-                <form
-                    className="form_area shadow rounded-5 p-4"
-                    onSubmit={handleSubmit}
-                >
-                    {/* Render SnackBar component if showSnackBar is true */}
-                    {showSnackBar && <SnackBar severity="success" message="Registration successful!" linkMsg={newMsg} />}
-
+                    <h2 className="text-center" style={{letterSpacing: "3px"}}> REGISTER FORM </h2>
                     <div className="mb-2">
                         <label htmlFor="exampleInputName" className="form-label">Name</label>
                         <input
@@ -106,7 +103,7 @@ const Register = () => {
                     </div>
 
                     <div className="text-center">
-                        <button type="submit" className="btn btn-success">Register</button>
+                        <button type="submit" className="btn btn-success w-50">Register</button>
                     </div>
 
 
