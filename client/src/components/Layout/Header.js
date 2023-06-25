@@ -3,14 +3,14 @@ import {NavLink ,Link} from "react-router-dom";
 import {HiShoppingBag} from 'react-icons/hi'
 
 const Header = () => {
-    return (<>
+    return (
             <nav className="navbar bg-dark navbar-expand-lg navbar-dark">
                 <div className="container-fluid">
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
                             aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span><i className=" fa-sharp fa-solid fa-bars"></i></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                         <Link
@@ -71,7 +71,7 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-        </>);
+        );
 };
 
 export default Header;
