@@ -9,12 +9,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import Login from "./pages/Authentication/Login";
 import {ToastContainer} from "react-toastify";
 import React from "react";
+import DashBoard from "./pages/user/DashBoard";
 function App() {
   return (
     <>
       <ToastContainer/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
+        <Route path="/dashboard" element={<DashBoard/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/about" element={<About/>}/>
