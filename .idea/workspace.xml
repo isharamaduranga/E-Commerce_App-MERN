@@ -7,6 +7,15 @@
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Routes/Private.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Routes/Private.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Authentication/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Authentication/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/user/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/user/DashBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +78,9 @@
       <workItem from="1687495485040" duration="45000" />
       <workItem from="1687495562419" duration="2736000" />
       <workItem from="1687498906115" duration="61151000" />
-      <workItem from="1687712333419" duration="7444000" />
+      <workItem from="1687712333419" duration="12395000" />
+      <workItem from="1688620252276" duration="10703000" />
+      <workItem from="1688637487099" duration="4001000" />
     </task>
     <servers />
   </component>

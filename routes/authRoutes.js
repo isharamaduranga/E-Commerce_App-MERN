@@ -3,23 +3,23 @@ import { registerController , loginController , testController } from "../contro
 import {isAdmin, requireSignIn} from "../middlewares/authMiddleware.js";
 //router object
 const router = express.Router();
-
-
 //routing
 
 /**  REGISTER || Method POST  */
-router.post("/register",registerController)
+router.post("/register",registerController);
 
 
 /** LOGIN  || POST  */
-router.post("/login",loginController)
+router.post("/login",loginController);
 
 //test routes
-router.get('/test',requireSignIn , isAdmin , testController)
+router.get('/test',requireSignIn , isAdmin , testController);
 
-//protected user route
-router.get('/user-auth',requireSignIn,(req, res)=>{
-    res.status(200).send({ok:true});
-})
+//protected User route auth
+router.get("/user-auth", requireSignIn, (req, res) => {
+    res.status(200).send({ ok: true });
+});
+//protected Admin route auth
+
 
 export default router;
