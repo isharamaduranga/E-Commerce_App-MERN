@@ -7,12 +7,9 @@
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Routes/Private.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Routes/Private.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Authentication/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Authentication/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/user/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/user/DashBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Authentication/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Authentication/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/userModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoutes.js" afterDir="false" />
@@ -41,21 +38,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/E-Commerce_App/client/src/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/projects/E-Commerce_App/client/src/components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\E-Commerce_App\client\src\components" />
@@ -80,7 +78,7 @@
       <workItem from="1687498906115" duration="61151000" />
       <workItem from="1687712333419" duration="12395000" />
       <workItem from="1688620252276" duration="10703000" />
-      <workItem from="1688637487099" duration="4001000" />
+      <workItem from="1688637487099" duration="11516000" />
     </task>
     <servers />
   </component>

@@ -1,37 +1,28 @@
 import React, {useState} from 'react';
 import Layout from "../../components/Layout/Layout";
 import {toast} from 'react-toastify';
-import {useNavigate,useLocation} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import axios from "axios";
-import {useAuth} from "../../context/auth";
 
 
-const Login = () => {
+const ForgotPassword = () => {
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [auth,setAuth]=useAuth();
-
+    const [newPassword, setNewPassword] = useState("");
+    const [answer, setAnswer] = useState("");
     const navigate = useNavigate();
-    const location = useLocation();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             const res = await axios.post(
-                '/api/v1/auth/login',
-                {email,password,
+                '/api/v1/auth/forgot-password',
+                {email,newPassword,answer
                 });
 
             if (res && res.data.success) {
                 toast.success(res.data.message);
-                setAuth({
-                    ...auth,
-                    user:res.data.user,
-                    token:res.data.token,
-                });
-                localStorage.setItem("auth",JSON.stringify(res.data));
-                navigate(location.state || "/");
+                navigate("/login");
             }else{
                 toast.error(res.data.message)
             }
@@ -40,14 +31,13 @@ const Login = () => {
             toast.error('Something went wrong !!! ')
         }
     };
-
-   // const newMsg = <Link to="/" className="link-warning">Home Page</Link>
     return (
-        <Layout title="Register - E-Commerce App">
+        <Layout title={'Forgot Password E-Commerce App'}>
+
             <div className="register">
                 <form className="form_area  rounded-5 pt-3 pb-4 ps-5 pe-5 bg-white" onSubmit={handleSubmit}>
 
-                    <h2 className="text-center mt-5 mb-5" style={{letterSpacing: "3px"}}> LOGIN FORM </h2>
+                    <h2 className="text-center mt-5 mb-5" style={{letterSpacing: "3px"}}> RESET PASSWORD</h2>
 
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail" className="form-label">E-Mail</label>
@@ -67,28 +57,32 @@ const Login = () => {
                             type="password"
                             className="form-control"
                             id="exampleInputPassword"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            value={newPassword}
+                            onChange={(e) => setNewPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputAnswer" className="form-label">Enter Your Favorite Sport Name ?</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="exampleInputAnswer"
+                            value={answer}
+                            onChange={(e) => setAnswer(e.target.value)}
                             required
                         />
                     </div>
 
                     <div className="text-center">
-                        <button type="button"
-                                className="btn btn-warning mt-4  w-75"
-                                onClick={()=>{navigate('/forgot-password')}
-                        }
-
-                        >Forgot Password</button>
-
-                    </div>
-                    <div className="text-center">
-                        <button type="submit" className="btn btn-success mt-3 mb-4 w-75">Login</button>
+                        <button type="submit" className="btn btn-info mt-3 mb-4 w-75">RESET</button>
                     </div>
                 </form>
             </div>
+
         </Layout>
     );
 };
 
-export default Login;
+export default ForgotPassword;
