@@ -22,15 +22,19 @@ router.post("/login",loginController);
 //test routes
 router.get('/test',requireSignIn , isAdmin , testController);
 
-//protected User route auth
+
+/** Forgot password || Post */
+router.post('/forgot-password',forgotPasswordController);
+
+
+/** protected User route auth */
 router.get("/user-auth", requireSignIn, (req, res) => {
     res.status(200).send({ ok: true });
 });
 
-//Forgot password || Post
-router.post('/forgot-password',forgotPasswordController);
-
-//protected Admin route auth
-
+/** protected Admin route auth */
+router.get("/admin-auth", requireSignIn, isAdmin , (req, res) => {
+    res.status(200).send({ ok: true });
+});
 
 export default router;
