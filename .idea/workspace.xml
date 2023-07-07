@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/routes/productRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/categoryModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/categoryModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/categoryController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -76,7 +77,7 @@
       <workItem from="1687498906115" duration="61151000" />
       <workItem from="1687712333419" duration="12395000" />
       <workItem from="1688620252276" duration="10703000" />
-      <workItem from="1688637487099" duration="34632000" />
+      <workItem from="1688637487099" duration="44554000" />
     </task>
     <servers />
   </component>
