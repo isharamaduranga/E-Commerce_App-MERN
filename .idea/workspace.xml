@@ -7,8 +7,10 @@
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Routes/AdminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Routes/AdminRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/AdminDashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/AdminDashBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/authMiddleware.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <workItem from="1687498906115" duration="61151000" />
       <workItem from="1687712333419" duration="12395000" />
       <workItem from="1688620252276" duration="10703000" />
-      <workItem from="1688637487099" duration="15073000" />
+      <workItem from="1688637487099" duration="19691000" />
     </task>
     <servers />
   </component>
