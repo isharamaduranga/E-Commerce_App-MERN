@@ -44,9 +44,12 @@ export const updateCategoryController = async (req,res) => {
     try {
         const {name} = req.body;
         const {id} = req.params;
-        const category = await categoryModel.findByIdAndUpdate(id,{name,slug:slugify(name)},{new:true})
+        const category = await categoryModel.findByIdAndUpdate(id,
+            {name,slug:slugify(name)},
+            {new: true}
+        );
         res.status(200).send({
-            status:true,
+            success:true,
             message:'Category Updated Successfully',
             category,
         });
@@ -54,8 +57,8 @@ export const updateCategoryController = async (req,res) => {
         console.log(error);
         res.status(500).send({
             success:false,
-            message:"Something went wrong in Update Category !!!",
             error,
+            message:"Something went wrong in Update Category !!!",
         });
     }
 }
