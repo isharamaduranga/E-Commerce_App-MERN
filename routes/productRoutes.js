@@ -20,7 +20,8 @@ router.post(
     requireSignIn,
     isAdmin,
     formidable(),
-    createProductController);
+    createProductController
+);
 
 /**  Update Product  */
 router.put(
@@ -28,7 +29,8 @@ router.put(
     requireSignIn,
     isAdmin,
     formidable(),
-    updateProductController);
+    updateProductController
+);
 
 /**  Get All products  */
 router.get('/get-product', getProductController)
