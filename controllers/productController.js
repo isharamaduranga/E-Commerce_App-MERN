@@ -26,8 +26,7 @@ export const createProductController = async (req, res) => {
             case !quantity:
                return  res.status(500).send({error:'Quantity is Required !'})
             case photo && photo.size > 1000000:
-               return  res.status(500).
-               send({error:'Photo is Required and should be less than 1mb !'});
+               return  res.status(500).send({error:'Photo is Required and should be less than 1mb !'});
         }
 
         const products = new productModel({...req.fields,slug:slugify(name)})
@@ -36,8 +35,8 @@ export const createProductController = async (req, res) => {
             products.photo.data = fs.readFileSync(photo.path)
             products.photo.contentType = photo.type
         }
-        await products.save()
-        res.status(200).send({
+        await products.save();
+        res.status(201).send({
             success:true,
             message:'product added successfully ...',
             products,
@@ -76,7 +75,7 @@ export const getProductController = async (req,res) =>{
         res.status(500).send({
             success:false,
             message:"Something went wrong in Getting Products !!!",
-            error,
+            error: error.message,
         });
     }
 }
@@ -126,7 +125,7 @@ export const productPhotoController = async (req,res) => {
 /**  Delete product */
 export const deleteProductController = async (req,res) =>{
     try {
-        const product = await  productModel.findByIdAndDelete(req.params.pid).select("photo")
+        const product = await  productModel.findByIdAndDelete(req.params.pid).select("-photo")
         res.status(200).send({
             success:true,
             message:'product Deleted Successfully',
