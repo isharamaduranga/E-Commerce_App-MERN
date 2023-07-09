@@ -2,14 +2,16 @@ import React, {useEffect, useState} from 'react';
 import Layout from "../components/Layout/Layout";
 import {useAuth} from "../context/auth";
 import axios from "axios";
-import {Checkbox} from "antd";
+import {Checkbox,Radio} from "antd";
 import {Link} from "react-router-dom";
 import {toast} from "react-toastify";
+import {Prices} from "../components/Prices";
 
 const HomePage = () => {
     const[products,setProducts]=useState([]);
     const[categories,setCategories]=useState([]);
     const[checked,setChecked]=useState([]);
+    const[radio,setRadio]=useState([]);
 
 
     /** get All Category */
@@ -57,7 +59,10 @@ const HomePage = () => {
         <Layout title={"All Products - Best Offers"}>
             <div className="row mt-3">
                 <div className="col-md-2">
-                    <h4 className='text-center'> Filter By Category</h4>
+
+                    {/* Category vise Filter */}
+                    <h4 className='ps-4'>Filter By Category</h4>
+                    <hr className='ms-2'/>
                     <div className="d-flex flex-column">
                         {categories.map(c => (
                             <Checkbox
@@ -69,9 +74,30 @@ const HomePage = () => {
                             </Checkbox>
                         ))}
                     </div>
+
+                    {/* Price vise Filter */}
+                    <h4 className='ps-4 mt-4'>Filter By Prices($)</h4>
+                     <hr className='ms-2'/>
+                    <div className="d-flex flex-column">
+                        <Radio.Group
+                            className='ps-4 fs-6'
+                            onChange={(e)=> setRadio(e.target.value) }>
+                            {Prices?.map(p => (
+
+                                <div key={p._id}>
+
+                                    <Radio value={p.array}>
+                                        {p.name}
+                                    </Radio>
+                                </div>
+
+                            ))}
+                        </Radio.Group>
+                    </div>
+
                 </div>
                 <div className="col-md-10">
-                    {JSON.stringify(checked,null,4)}
+                    {JSON.stringify(radio,null,4)}
 
                     <h1 className='text-center'>All Products</h1>
                     <div className="d-flex flex-wrap gap-4">
