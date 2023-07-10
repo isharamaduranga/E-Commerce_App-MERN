@@ -3,6 +3,7 @@ import {Link, NavLink} from "react-router-dom";
 import {HiShoppingBag} from 'react-icons/hi'
 import {useAuth} from "../../context/auth";
 import {toast} from 'react-toastify';
+import SearchInput from "../Form/SearchInput";
 const Header = () => {
     const [auth, setAuth] = useAuth();
 
@@ -34,6 +35,11 @@ const Header = () => {
                             <HiShoppingBag className="pb-1 text-warning" size="35px"/> E-COMMERCE
                         </Link>
                         <ul className="navbar-nav  ms-auto mb-2 mb-lg-0">
+
+                            <li className="nav-item pt-1 me-5">
+                                <SearchInput/>
+                            </li>
+
                             <li className="nav-item">
                                 <NavLink
                                     to="/"

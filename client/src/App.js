@@ -21,6 +21,8 @@ import Orders from "./pages/user/Orders";
 import Profile from "./pages/user/Profile";
 import Products from "./pages/Admin/Products";
 import UpdateProduct from "./pages/Admin/UpdateProduct";
+import Search from "./pages/Search";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
     return (
@@ -28,6 +30,8 @@ function App() {
             <ToastContainer/>
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
+                <Route path="/search" element={<Search/>}/>
+                <Route path="/product/:slug" element={<ProductDetails/>}/>
 
                 <Route path="/dashboard" element={<PrivateRoute/>}>
                     <Route path="user" element={<DashBoard/>}/>
