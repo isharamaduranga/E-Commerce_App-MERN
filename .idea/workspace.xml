@@ -7,10 +7,9 @@
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ProductDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/productRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/productRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "D:/projects/E-Commerce_App/client/src/components",
+    "last_opened_file_path": "D:/projects/E-Commerce_App/client/src/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,10 +56,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\E-Commerce_App\client\src\components" />
       <recent name="D:\projects\E-Commerce_App\client\src\assets" />
+      <recent name="D:\projects\E-Commerce_App\client\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\E-Commerce_App\client\src\pages" />
       <recent name="D:\projects\E-Commerce_App\client\src" />
       <recent name="D:\projects\E-Commerce_App\client" />
     </key>
@@ -80,7 +80,7 @@
       <workItem from="1687712333419" duration="12395000" />
       <workItem from="1688620252276" duration="10703000" />
       <workItem from="1688637487099" duration="67959000" />
-      <workItem from="1688831027726" duration="78019000" />
+      <workItem from="1688831027726" duration="82162000" />
     </task>
     <servers />
   </component>

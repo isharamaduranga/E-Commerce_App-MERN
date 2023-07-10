@@ -4,7 +4,7 @@ import {
     createProductController,
     deleteProductController,
     getProductController,
-    getSingleProductController,
+    getSingleProductController, productCategoryController,
     productCountController,
     productFilterController,
     productListController,
@@ -62,6 +62,9 @@ router.get('/search/:keyword', searchProductController)
 
 /** Similar product */
 router.get('/related-product/:pid/:cid', relatedProductController)
+
+/** Category vise product */
+router.get('/product-category/:slug', productCategoryController)
 
 
 
