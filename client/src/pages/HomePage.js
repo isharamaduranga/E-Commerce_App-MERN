@@ -9,7 +9,9 @@ const HomePage = () => {
     const [categories, setCategories] = useState([]);
     const [checked, setChecked] = useState([]);
     const [radio, setRadio] = useState([]);
-
+    const [total, setTotal] = useState(0);
+    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(false);
 
     /** get All Category */
     const getAllCategory = async () => {
@@ -24,17 +26,51 @@ const HomePage = () => {
     };
     useEffect(() => {
         getAllCategory();
+        getTotal();
     }, []);
+
 
     /** Get All Products */
     const getAllProducts = async () => {
         try {
-            const {data} = await axios.get('/api/v1/product/get-product');
+            setLoading(true)
+            const {data} = await axios.get(`/api/v1/product/product-list/${page}`);
+            setLoading(false)
             setProducts(data.products);
+        } catch (error) {
+            setLoading(false)
+            console.log(error);
+        }
+    };
+
+    /** get Total Count */
+    const getTotal = async () => {
+        try {
+            const {data} = await axios.get('/api/v1/product/product-count');
+                setTotal(data?.total);
         } catch (error) {
             console.log(error);
         }
-    }
+    };
+
+    useEffect(() => {
+        if (page === 1) return;
+        loadMore();
+    }, [page]);
+
+    //load more
+    const loadMore = async () => {
+        try {
+            setLoading(true);
+            const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+            setLoading(false);
+            setProducts([...products, ...data?.products]);
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    };
+
 
     useEffect(() => {
         if (!checked.length || !radio.length) getAllProducts();
@@ -99,21 +135,29 @@ const HomePage = () => {
                             {Prices?.map(p => (
 
                                 <div key={p._id}>
-
                                     <Radio value={p.array}>
                                         {p.name}
                                     </Radio>
                                 </div>
-
                             ))}
                         </Radio.Group>
+                    </div>
+
+                    <div className="mt-5 text-center">
+                        <button
+                            className='btn btn-danger w-75'
+                            onClick={() => window.location.reload()}
+                        >
+                            RESET FILTERS
+                        </button>
+
                     </div>
 
                 </div>
                 <div className="col-md-10">
                    {/* {JSON.stringify(radio, null, 4)}*/}
                     <h1 className='text-center'>All Products</h1>
-                    <div className="d-flex flex-wrap justify-content-evenly">
+                    <div className="d-flex flex-wrap  justify-content-md-center gap-5">
                         {products?.map(p => (
                             <div key={p._id} className="card m-2 border border-1 shadow" style={{width: '20rem'}}>
                                 <img src={`/api/v1/product/product-photo/${p._id}`}
@@ -128,15 +172,24 @@ const HomePage = () => {
                                         <button className="btn btn-info ms-1">More Details</button>
                                         <button className="btn btn-primary ms-1">Add To Cart</button>
                                     </div>
-
                                 </div>
                             </div>
                         ))}
                     </div>
+                    <div className='m-2 p-3 text-center'>
+                        {products && products.length<total && (
+                            <button className='btn btn-warning' onClick={
+                                (e) => {
+                                    e.preventDefault();
+                                    setPage(page + 1);
+                                }
+                            }>
+                                {loading ? "Loading ..." : "Load-more"}
+                            </button>
+                        )}
+                    </div>
                 </div>
             </div>
-
-
         </Layout>
     );
 };

@@ -4,10 +4,11 @@ import AdminMenu from "../../components/Layout/AdminMenu";
 import {toast} from 'react-toastify';
 import axios from "axios";
 import {Select} from 'antd'
+import {useNavigate} from "react-router-dom";
 const {Option} = Select;
 
 const CreateProduct = () => {
-
+    const navigate = useNavigate();
     const [categories, setCategories] = useState([]);
     const [name, setName] = useState("");
     const [photo, setPhoto] = useState("");
@@ -56,6 +57,8 @@ const CreateProduct = () => {
               toast.error(data?.message);
           }else{
               toast.success('Product Added Successfully ...');
+              navigate("/dashboard/admin/products");
+              window.location.reload()
           }
 
       }catch (error) {

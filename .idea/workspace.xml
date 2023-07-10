@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/CreateProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/CreateProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/UpdateProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/UpdateProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/HomePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/productRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/productRoutes.js" afterDir="false" />
@@ -75,7 +79,7 @@
       <workItem from="1687712333419" duration="12395000" />
       <workItem from="1688620252276" duration="10703000" />
       <workItem from="1688637487099" duration="67959000" />
-      <workItem from="1688831027726" duration="45629000" />
+      <workItem from="1688831027726" duration="52743000" />
     </task>
     <servers />
   </component>

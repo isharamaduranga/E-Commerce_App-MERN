@@ -84,6 +84,8 @@ const UpdateProduct = () => {
                  toast.error(data?.message);
              }else{
                  toast.success('Product Updated Successfully ...');
+                 navigate("/dashboard/admin/products");
+                 window.location.reload()
              }
 
          }catch (error) {
