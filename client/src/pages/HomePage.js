@@ -160,14 +160,14 @@ const HomePage = () => {
                     <h1 className='text-center'>All Products</h1>
                     <div className="d-flex flex-wrap  justify-content-md-center gap-5">
                         {products?.map(p => (
-                            <div key={p._id} className="card m-2 border border-1 shadow" style={{width: '20rem'}}>
+                            <div key={p._id} className="card m-2 border border-1 border-info shadow" style={{width: '20rem'}}>
                                 <img src={`/api/v1/product/product-photo/${p._id}`}
                                      className="card-img-top"
                                      alt={p.name}
                                 />
                                 <div className="card-body">
                                     <h5 className="card-title">{p.name}</h5>
-                                    <p className="card-text">{p.description.substring(0,60)} ...</p>
+                                    <p className="card-text">{p.description.substring(0,33)}...</p>
                                     <h1 className="card-text badge badge-pill badge-danger fs-4"> $ {p.price}</h1>
                                     <div>
                                         <button
