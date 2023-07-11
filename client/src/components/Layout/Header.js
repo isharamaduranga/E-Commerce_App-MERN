@@ -5,9 +5,11 @@ import {useAuth} from "../../context/auth";
 import {toast} from 'react-toastify';
 import SearchInput from "../Form/SearchInput";
 import useCategory from "../../hooks/useCategory";
-
+import {useCart} from "../../context/cart";
+import { Badge } from 'antd';
 const Header = () => {
     const [auth, setAuth] = useAuth();
+    const [cart] = useCart();
     const categories = useCategory();
 
     const handleLogOut = () => {
@@ -126,22 +128,22 @@ const Header = () => {
                                 </>
 
                             )}
-                            <li className="nav-item">
-                                <NavLink
-                                    to="/cart"
-                                    className="nav-link"
-                                    href="#">
-                                    Cart (0)
-                                </NavLink>
+                            <li className="nav-item mt-2">
+                                <Badge count={cart?.length} overflowCount={10}>
+                                    <NavLink
+                                        to="/cart"
+                                        className="nav-link"
+                                        href="#">
+                                        CART
+                                    </NavLink>
+                                </Badge>
                             </li>
-
                         </ul>
 
                     </div>
                 </div>
             </nav>
         </>
-
     );
 };
 
