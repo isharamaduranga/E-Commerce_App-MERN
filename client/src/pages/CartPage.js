@@ -17,11 +17,15 @@ const CartPage = () => {
             let index = myCart.findIndex(item => item._id === pid)
             myCart.splice(index,1)
             setCart(myCart)
+            //Reset local storage when remove item in cart
+            localStorage.setItem('cart',JSON.stringify(myCart));
 
         } catch (error) {
             console.log(error);
         }
     };
+
+
 
 
     return (<Layout>
@@ -67,8 +71,8 @@ const CartPage = () => {
                         ))}
                     </div>
 
-                    <div className="col-md-6 mt-3">
-                        Checkout | Payement
+                    <div className="col-md-6 mt-3 text-center">
+
                     </div>
                 </div>
 

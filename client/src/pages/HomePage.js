@@ -185,6 +185,9 @@ const HomePage = () => {
                                             className="btn btn-primary ms-1"
                                             onClick={()=> {
                                                 setCart([...cart,p])
+                                                //Create & set Cart items to save in local Storage using JSON Array format
+                                                localStorage.setItem('cart',JSON.stringify([...cart,p]));
+
                                                 toast.success('Item Added to Cart ✅')
                                             }}
                                         >
