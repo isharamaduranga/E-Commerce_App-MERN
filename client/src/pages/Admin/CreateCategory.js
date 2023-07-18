@@ -103,7 +103,7 @@ const CreateCategory = () => {
                 <div className="col-md-3">
                     <AdminMenu/>
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-9 ps-5 pe-5" style={{ borderLeft: '1px solid gray' }} >
                     <h1 className='text-center'> Manage Category </h1>
                     <div className="p-3 w-75">
 

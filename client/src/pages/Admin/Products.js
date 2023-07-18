@@ -29,7 +29,7 @@ const Products = () => {
                 <div className="col-md-3">
                     <AdminMenu/>
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-9" style={{ borderLeft: '1px solid gray' }}>
                     <h1 className='text-center'>All Products List</h1>
                     <div className="d-flex flex-wrap justify-content-md-center gap-4">
                         {products?.map(p => (

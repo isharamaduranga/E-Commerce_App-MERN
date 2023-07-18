@@ -116,7 +116,7 @@ const UpdateProduct = () => {
                     <div className="col-md-3">
                         <AdminMenu/>
                     </div>
-                    <div className="col-md-9 ps-5 pe-5">
+                    <div className="col-md-9 ps-5 pe-5" style={{ borderLeft: '1px solid gray' }} >
                         <h1 className='text-center pt-2 pb-2'> Update Product</h1>
                         <div className='row'>
                             <div className="col-md-6">

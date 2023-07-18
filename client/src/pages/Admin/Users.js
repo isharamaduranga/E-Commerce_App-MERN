@@ -11,8 +11,9 @@ const Users = () => {
                     <div className="col-md-3">
                         <AdminMenu/>
                     </div>
-                    <div className="col-md-9">
-                        <h1>Users</h1>
+                    <div className="col-md-9" style={{ borderLeft: '1px solid gray' }}>
+                        <h1 className={'mt-2 text-center'}>All Users</h1>
+                        <hr/>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import {useNavigate} from "react-router-dom";
 import {useCart} from "../context/cart";
 import {toast} from "react-toastify";
 
+
 const HomePage = () => {
     const [cart, setCart] = useCart();
     const [products, setProducts] = useState([]);
@@ -161,20 +162,29 @@ const HomePage = () => {
                 <div className="col-md-10">
                    {/* {JSON.stringify(radio, null, 4)}*/}
                     <h1 className='text-center'>All Products</h1>
-                    <div className="d-flex flex-wrap  justify-content-md-center gap-5">
+                    <hr/>
+                    <div className="d-flex flex-wrap justify-content-center gap-2">
                         {products?.map(p => (
-                            <div key={p._id} className="card m-2 border border-1 border-info shadow" style={{width: '20rem'}}>
+                            <div key={p._id} className="card m-2 border  shadow border-info rounded-5"
+                                 style={{width: '18rem', height: '25rem'}}>
                                 <img src={`/api/v1/product/product-photo/${p._id}`}
-                                     className="card-img-top"
+                                     className="card-img-top  mt-2 "
                                      alt={p.name}
+                                     style={{
+                                         height:'11rem',
+                                         width:'12rem',
+                                         margin:'auto',
+                                }}
                                 />
+                                <hr className={'m-2'}/>
                                 <div className="card-body">
-                                    <h5 className="card-title">{p.name}</h5>
-                                    <p className="card-text">{p.description.substring(0,33)}...</p>
-                                    <h1 className="card-text badge badge-pill badge-danger fs-4"> $ {p.price}</h1>
-                                    <div>
+                                    <h5 className="card-title">{p.name.substring(0,20)}</h5>
+                                    <small className="card-text">{p.description.substring(0,30)}...</small>
+                                    <br/>
+                                    <h1 className="card-text badge badge-pill badge-danger mt-2 fs-5"> $ {p.price}</h1>
+                                    <div className={'pt-2'}>
                                         <button
-                                            className="btn btn-info ms-1"
+                                            className="btn btn-info btn-sm me-1"
                                             onClick={()=>{
                                                 navigate(`/product/${p.slug}`)
                                             }}
@@ -182,7 +192,7 @@ const HomePage = () => {
                                         </button>
 
                                         <button
-                                            className="btn btn-primary ms-1"
+                                            className="btn btn-primary btn-sm ms-1"
                                             onClick={()=> {
                                                 setCart([...cart,p])
                                                 //Create & set Cart items to save in local Storage using JSON Array format

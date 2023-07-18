@@ -52,7 +52,7 @@ const Header = () => {
                                 </NavLink>
                             </li>
 
-                            <li className="nav-item dropdown">
+                            <li className="nav-item  dropdown">
                                 <Link className="nav-link dropdown-toggle"
                                       to={"/categories"}
                                       data-bs-toggle="dropdown"

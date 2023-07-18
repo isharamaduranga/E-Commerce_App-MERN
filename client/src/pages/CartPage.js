@@ -25,7 +25,22 @@ const CartPage = () => {
         }
     };
 
+    //Find Total Price
+    const totalPrice = () => {
+      try {
+          let total = 0;
 
+          cart.map(item=>{
+              total+=item.price;
+          })
+          return total.toLocaleString('en-US',{
+              style:'currency',
+              currency:"USD"
+          })
+      }catch (error) {
+          console.log(error)
+      }
+    }
 
 
     return (<Layout>
@@ -43,23 +58,25 @@ const CartPage = () => {
                     </div>
                 </div>
 
-                <div className="row mt-3">
+                <div className="row mt-2">
 
-                    <div className="col-md-6 mt-3">
+                    <div
+                        className="col-md-6 mt-1 border border-info rounded-5 p-3"
+                        style={{overflowY:'scroll' , height:'63vh'}}>
                         {cart?.map(p => (
-                            <div className='row mb-2 flex-row p-2 border border-warning shadow rounded-5'>
-                                <div key={p._id} className="col-md-4 border-end">
+                            <div className='row mb-2 flex-row p-2 ms-4 me-4 border border-warning shadow rounded-5'>
+                                <div key={p._id} className="col-md-3 border-end">
                                     <img
                                         src={`/api/v1/product/product-photo/${p._id}`}
                                         className="card-img-top"
                                         alt={p.name}
-                                        style={{height:'150px'}}
+                                        style={{height:'120px'}}
                                     />
                                 </div>
-                                <div className='col-md-8 mt-3 ps-2'>
-                                    <h5 className='text-center text-dark'>{p.name}</h5>
+                                <div className='col-md-9 mt-1 ps-5'>
+                                    <h6 className=' fw-bold text-dark'>{p.name}</h6>
                                     <small>{p.description.substring(0,45)}</small>
-                                    <p className='fw-bold'>Price : {p.price}$</p>
+                                    <p className=' text-primary m-1'>Price : {p.price}$</p>
                                     <button
                                         className='btn btn-sm btn-danger'
                                         onClick={()=>
@@ -71,8 +88,11 @@ const CartPage = () => {
                         ))}
                     </div>
 
-                    <div className="col-md-6 mt-3 text-center">
-
+                    <div className="col-md-6  text-center">
+                        <h4>Cart Summary</h4>
+                        <p>Total | Checkout | Payment</p>
+                        <hr/>
+                        <h5>Total :<span className='text-danger'> {totalPrice()}</span></h5>
                     </div>
                 </div>
 

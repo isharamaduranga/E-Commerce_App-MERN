@@ -74,8 +74,10 @@ const CreateProduct = () => {
                     <div className="col-md-3">
                         <AdminMenu/>
                     </div>
-                    <div className="col-md-9 ps-5 pe-5">
-                        <h1 className='text-center pt-2 pb-2'> Create Product</h1>
+                    <div className="col-md-9 " style={{ borderLeft: '1px solid gray' }} >
+                        <h1 className='text-center pt-1 pb-1'> Create Product</h1>
+                        <hr/>
+
                         <div className='row'>
                             <div className="col-md-6">
                                 <div className="m-1">
@@ -184,6 +186,8 @@ const CreateProduct = () => {
                                 </div>
                             </div>
                         </div>
+
+
                         <div className="mt-5 text-center">
                             <button
                                 className='btn btn-success w-50'

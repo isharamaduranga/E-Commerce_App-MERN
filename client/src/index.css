@@ -114,8 +114,12 @@ main{
 .card-img-top{
     height: 200px;
     object-fit: contain;
+    transition: transform .2s; /* Animation */
 }
 
+.card-img-top:hover{
+    transform: scale(1.3);
+}
 
 
 

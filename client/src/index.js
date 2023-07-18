@@ -19,7 +19,7 @@ root.render(
             </BrowserRouter>
         </CartProvider>
     </SearchProvider>
-</AuthProvider>
+  </AuthProvider>
 )
 
 
