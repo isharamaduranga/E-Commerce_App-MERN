@@ -6,23 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/AdminMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/AdminMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/CreateCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/CreateCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/CreateProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/CreateProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/UpdateProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/UpdateProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/CartPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/CategoryProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/CategoryProduct.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/ProductDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ProductDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Authentication/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Authentication/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/user/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/user/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/projects/E-Commerce_App/client/src/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.last.introduce.type": "LET",
+    "last_opened_file_path": "D:/projects/E-Commerce_App/client/src/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\E-Commerce_App\client\src\assets" />
@@ -97,7 +86,7 @@
       <workItem from="1689069364328" duration="82000" />
       <workItem from="1689237341893" duration="5000000" />
       <workItem from="1689254869900" duration="131000" />
-      <workItem from="1689259454219" duration="71722000" />
+      <workItem from="1689259454219" duration="80767000" />
     </task>
     <servers />
   </component>

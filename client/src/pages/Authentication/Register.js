@@ -64,6 +64,7 @@ const Register = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
+
                         />
                     </div>
 

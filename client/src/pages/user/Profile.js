@@ -16,27 +16,43 @@ const Profile = () => {
     const [address, setAddress] = useState("");
 
 
+    useEffect(() => {
+        // Check if the auth.user object exists before destructuring
+        if (auth?.user) {
+            const { email, name, phone, address } = auth?.user;
+            setName(name);
+            setPhone(phone);
+            setEmail(email);
+            setAddress(address);
+        }
+    }, [auth?.user]);
+
+
     //form handle submit
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const res = await axios.post(
-                '/api/v1/auth/register',
+            const data = await axios.put(
+                '/api/v1/auth/profile',
                 {name,email,password,phone,address}
             );
+            if(data?.error){
+                toast.error(data?.error);
+            }else{
+                setAuth({...auth, user: data?.updatedUser})
+                let item = localStorage.getItem("auth");
+                item = JSON.parse(item)
+                item.user = data.updatedUser;
+                localStorage.setItem('auth',JSON.stringify(item));
+                toast.success('Profile Updated Successfully..');
+            }
 
         } catch (error) {
             console.log(error);
             toast.error('Something went wrong !!!');
         }
     }
-
-
-    useEffect(() => {
-
-    }, []);
-
 
 
     return (
@@ -52,7 +68,7 @@ const Profile = () => {
                         <div className="register">
                             <form className="form_area  rounded-5 pt-3 pb-4 ps-5 pe-5 bg-white" onSubmit={handleSubmit}>
 
-                                <h2 className="text-center" style={{letterSpacing: "3px"}}> REGISTER FORM </h2>
+                                <h2 className="text-center" style={{letterSpacing: "3px"}}> USER PROFILE </h2>
                                 <div className="mb-2">
                                     <label htmlFor="exampleInputName" className="form-label">Name</label>
                                     <input
@@ -61,7 +77,7 @@ const Profile = () => {
                                         id="exampleInputName"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
-                                        required
+                                        autoFocus
                                     />
                                 </div>
 
@@ -73,7 +89,7 @@ const Profile = () => {
                                         id="exampleInputEmail"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        required
+                                        disabled
                                     />
                                 </div>
 
@@ -85,7 +101,6 @@ const Profile = () => {
                                         id="exampleInputPassword"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
-                                        required
                                     />
                                 </div>
 
@@ -97,7 +112,6 @@ const Profile = () => {
                                         id="exampleInputPhone"
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
-                                        required
                                     />
                                 </div>
 
@@ -109,7 +123,6 @@ const Profile = () => {
                                         id="exampleInputAddress"
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
-                                        required
                                     />
                                 </div>
 

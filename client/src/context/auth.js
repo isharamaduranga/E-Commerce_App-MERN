@@ -4,7 +4,7 @@ import axios from "axios";
 const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
     const [auth,setAuth] = useState({
-        user:null,
+        user:null ,
         token:""
     });
 
