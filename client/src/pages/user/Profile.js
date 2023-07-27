@@ -15,16 +15,15 @@ const Profile = () => {
     const [phone, setPhone] = useState("");
     const [address, setAddress] = useState("");
 
-
+    //get all user data
     useEffect(() => {
         // Check if the auth.user object exists before destructuring
-        if (auth?.user) {
             const { email, name, phone, address } = auth?.user;
             setName(name);
             setPhone(phone);
             setEmail(email);
             setAddress(address);
-        }
+
     }, [auth?.user]);
 
 
@@ -33,9 +32,9 @@ const Profile = () => {
         e.preventDefault();
 
         try {
-            const data = await axios.put(
+            const {data} = await axios.put(
                 '/api/v1/auth/profile',
-                {name,email,password,phone,address}
+                {name,email,password,phone,address,}
             );
             if(data?.error){
                 toast.error(data?.error);

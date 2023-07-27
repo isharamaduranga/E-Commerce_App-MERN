@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from "../../components/Layout/Layout";
 import AdminMenu from "../../components/Layout/AdminMenu";
-import DashBoard from "../user/DashBoard";
+
 
 const Users = () => {
     return (
@@ -17,7 +17,8 @@ const Users = () => {
                     </div>
                 </div>
             </div>
-        </Layout>);
+        </Layout>
+    );
 };
 
 export default Users;

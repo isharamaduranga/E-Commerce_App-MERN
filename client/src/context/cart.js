@@ -8,12 +8,9 @@ const CartProvider = ({ children }) => {
     useEffect(()=>{
         //get Local Storage already store cart items using useEffect
         let existingCartItem = localStorage.getItem('cart')
-
         if (existingCartItem)setCart(JSON.parse(existingCartItem))
 
-        },[]
-    )
-
+        },[]);
     return(
         <CartContext.Provider value={[cart, setCart]}>
             {children}
