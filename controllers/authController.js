@@ -1,6 +1,7 @@
 import userModel from "../models/userModel.js";
 import {comparePassword, hashPassword} from "../helpers/authHelper.js";
 import JWT from 'jsonwebtoken'
+import orderModel from "../models/orderModel.js";
 
 
 export const registerController = async (req ,res) => {
@@ -10,22 +11,22 @@ export const registerController = async (req ,res) => {
 
         //validation Properties
         if (!name) {
-           return res.send({message:'Name is Required !!!',});
+            return res.send({message:'Name is Required !!!',});
         }
         if (!email) {
-           return res.send({message:'Email is Required !!!',});
+            return res.send({message:'Email is Required !!!',});
         }
         if (!password) {
-           return res.send({message:'Password is Required !!!',});
+            return res.send({message:'Password is Required !!!',});
         }
         if (!phone) {
-           return res.send({message:'Phone is Required !!!',});
+            return res.send({message:'Phone is Required !!!',});
         }
         if (!address) {
-           return res.send({message:'Address is Required !!!',});
+            return res.send({message:'Address is Required !!!',});
         }
         if (!answer) {
-           return res.send({message:'Answer is Required !!!',});
+            return res.send({message:'Answer is Required !!!',});
         }
 
         //Check User Logics
@@ -69,7 +70,7 @@ export const registerController = async (req ,res) => {
 //POST LOGIN
 export const loginController = async (req ,res) => {
     try {
-    const{email,password}= req.body;
+        const{email,password}= req.body;
 
         //validation
         if (!email || !password){
@@ -214,3 +215,59 @@ export const updateProfileController = async ( req , res )=>{
     }
 };
 
+//orders
+export const getOrdersController = async (req, res) => {
+    try {
+        const orders = await orderModel
+            .find({ buyer: req.user._id })
+            .populate("products", "-photo")
+            .populate("buyer", "name");
+        res.json(orders);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: "Error While Getting Orders",
+            error,
+        });
+    }
+};
+//orders
+export const getAllOrdersController = async (req, res) => {
+    try {
+        const orders = await orderModel
+            .find({})
+            .populate("products", "-photo")
+            .populate("buyer", "name")
+            .sort({ createdAt: "-1" });
+        res.json(orders);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: "Error While Getting Orders",
+            error,
+        });
+    }
+};
+
+//order status
+export const orderStatusController = async (req, res) => {
+    try {
+        const {orderId} = req.params;
+        const {status} = req.body;
+        const orders = await orderModel.findByIdAndUpdate(
+            orderId,
+            {status},
+            {new: true}
+        );
+        res.json(orders);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: "Error While Updating Order",
+            error,
+        });
+    }
+};

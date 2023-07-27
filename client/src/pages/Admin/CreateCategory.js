@@ -97,7 +97,8 @@ const CreateCategory = () => {
 
     var count = 0;
 
-    return (<Layout title={'DashBoard - Create Category'}>
+    return (
+        <Layout title={'DashBoard - Create Category'}>
         <div className="container-fluid  p-3">
             <div className="row">
                 <div className="col-md-3">

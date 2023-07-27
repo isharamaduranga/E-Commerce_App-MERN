@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="affcbb81-206c-4599-aa0e-3e2453830273" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Routes/AdminRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Routes/AdminRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Spinner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/CartPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/user/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/user/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/AdminMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/AdminMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin/CreateCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin/CreateCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/user/Orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/user/Orders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/categoryModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/categoryModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/userModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/productRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/productRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +91,7 @@
       <workItem from="1689259454219" duration="82734000" />
       <workItem from="1690012452231" duration="1000" />
       <workItem from="1690012615657" duration="151000" />
-      <workItem from="1690431001248" duration="17315000" />
+      <workItem from="1690431001248" duration="24955000" />
     </task>
     <servers />
   </component>
